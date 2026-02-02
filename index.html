@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karma '26 - National Level Techno Cultural Extravaganza</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Orbitron', monospace;
+            background: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #000000;
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(220, 38, 38, 0.3);
+            border-radius: 50%;
+            animation: float 20s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+            background: #000000;
+            border-bottom: 1px solid rgba(220, 38, 38, 0.3);
+        }
+
+        .logo-text {
+            font-size: 6rem;
+            font-weight: 900;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .year {
+            font-size: 3.5rem;
+            color: #dc2626;
+            font-weight: 900;
+            display: inline-block;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: #a3a3a3;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            margin-top: 1.5rem;
+            font-weight: 400;
+        }
+
+        /* Countdown Section */
+        .countdown-section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .countdown-title {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            font-weight: 400;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .countdown-item {
+            background: #0a0a0a;
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            border-radius: 4px;
+            padding: 2rem 2.5rem;
+            min-width: 140px;
+            transition: all 0.3s ease;
+        }
+
+        .countdown-item:hover {
+            border-color: #dc2626;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
+        }
+
+        .countdown-number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #dc2626;
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            color: #a3a3a3;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            margin-top: 0.5rem;
+            font-weight: 400;
+        }
+
+        /* Event Info Section */
+        .event-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .info-card {
+            background: #0a0a0a;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+            border-radius: 4px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            border-color: #dc2626;
+            transform: scale(1.02);
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .info-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #dc2626;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-label {
+            font-size: 0.85rem;
+            color: #a3a3a3;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            font-weight: 400;
+        }
+
+        /* About Section */
+        .about-section {
+            max-width: 900px;
+            margin: 5rem auto;
+            padding: 3rem 2rem;
+            background: #0a0a0a;
+            border-radius: 4px;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+
+        .about-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            font-weight: 700;
+        }
+
+        .about-text {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #d4d4d4;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        /* Highlights Section */
+        .highlights-section {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            font-weight: 700;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .highlight-card {
+            background: #0a0a0a;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+            border-radius: 4px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-card:hover {
+            border-color: #dc2626;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
+        }
+
+        .highlight-title {
+            font-size: 1.1rem;
+            color: #dc2626;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-weight: 600;
+        }
+
+        .highlight-text {
+            color: #d4d4d4;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            max-width: 1100px;
+            margin: 5rem auto;
+            padding: 3rem 2rem;
+            background: #0a0a0a;
+            border-radius: 4px;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: #000000;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+            border-radius: 4px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: #dc2626;
+        }
+
+        .contact-name {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+        }
+
+        .contact-role {
+            color: #a3a3a3;
+            margin-bottom: 1rem;
+            font-size: 0.75rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        .contact-phone {
+            color: #dc2626;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #000000;
+            border-top: 1px solid rgba(220, 38, 38, 0.3);
+            margin-top: 5rem;
+        }
+
+        .footer-text {
+            color: #a3a3a3;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.1rem;
+        }
+
+        .footer-college {
+            color: #dc2626;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo-text {
+                font-size: 3.5rem;
+                letter-spacing: 0.3rem;
+            }
+
+            .year {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 0.75rem;
+                letter-spacing: 0.2rem;
+            }
+
+            .countdown-item {
+                min-width: 110px;
+                padding: 1.5rem 2rem;
+            }
+
+            .countdown-number {
+                font-size: 3rem;
+            }
+
+            .section-title, .about-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="particles" id="particles"></div>
+
+    <header>
+        <div class="logo-text">KARMA</div>
+        <div class="year">'26</div>
+        <div class="tagline">National Level Techno Cultural Extravaganza</div>
+    </header>
+
+    <section class="countdown-section">
+        <h2 class="countdown-title">Event Begins In</h2>
+        <div class="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">00</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">00</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+
+        <div class="event-info">
+            <div class="info-card">
+                <div class="info-icon">🎯</div>
+                <div class="info-number">30+</div>
+                <div class="info-label">Events</div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">🏆</div>
+                <div class="info-number">₹1L+</div>
+                <div class="info-label">Prize Pool</div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">👥</div>
+                <div class="info-number">3500+</div>
+                <div class="info-label">Participants</div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">📅</div>
+                <div class="info-number">24-26</div>
+                <div class="info-label">March 2026</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <h2 class="about-title">About Karma '26</h2>
+        <p class="about-text">
+            Karma, the crowning jewel in our annual calendar, represents more than just an event; it stands as the epitome of innovation, collaboration, and cultural richness at KMCT College of Engineering. This Annual National Level Techno-Socio-Cultural extravaganza is a grand celebration that goes beyond the ordinary.
+        </p>
+        <p class="about-text" style="margin-top: 1.5rem;">
+            At Karma, we create an immersive experience that seamlessly integrates technology, socio-cultural vibrancy, and academic excellence. Join us in this grand celebration, where each moment is a testament to the limitless potential within the KMCT College of Engineering community.
+        </p>
+    </section>
+
+    <section class="highlights-section">
+        <h2 class="section-title">Event Highlights</h2>
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <div class="highlight-title">🎪 Exotic DJ Shows</div>
+                <p class="highlight-text">Experience electrifying performances from renowned DJs that will keep you dancing all night</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-title">💻 Tech Competitions</div>
+                <p class="highlight-text">Showcase your technical prowess in cutting-edge competitions and challenges</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-title">🎨 Cultural Programs</div>
+                <p class="highlight-text">Celebrate diversity through vibrant cultural performances and artistic expressions</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-title">🎤 Interactive Sessions</div>
+                <p class="highlight-text">Engage with industry experts and thought leaders in interactive symposiums</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-name">Midhun</div>
+                <div class="contact-role">Staff Co-ordinator</div>
+                <div class="contact-phone">+91 7593 992 817</div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-name">Anu Fazil</div>
+                <div class="contact-role">Student Co-ordinator</div>
+                <div class="contact-phone">+91 7593 992 817</div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-name">Nihal</div>
+                <div class="contact-role">Student Co-ordinator</div>
+                <div class="contact-phone">+91 96450 80905</div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-name">Rashin</div>
+                <div class="contact-role">Student Co-ordinator</div>
+                <div class="contact-phone">+91 85903 87011</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-text">© 2026 Karma - All Rights Reserved</div>
+        <div class="footer-college">KMCT College of Engineering</div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const eventDate = new Date('March 26, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                document.querySelector('.countdown-title').textContent = 'Event is Live!';
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Particle Animation
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 40;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                
+                // Red themed particles
+                const colors = [
+                    'rgba(220, 38, 38, 0.3)',
+                    'rgba(220, 38, 38, 0.2)',
+                    'rgba(185, 28, 28, 0.3)'
+                ];
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+    </script>
+</body>
+</html>
