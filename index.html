@@ -493,10 +493,24 @@
         }
 
         .contact-phone {
-            color: #dc2626;
+            color: #dc2626 !important;
+            -webkit-text-fill-color: #dc2626 !important;
             font-size: 0.85rem;
             font-weight: 500;
         }
+
+        /* Ensure the phone color remains the same across all states and on mobile */
+        .contact-phone,
+        .contact-phone:link,
+        .contact-phone:visited,
+        .contact-phone:hover,
+        .contact-phone:active,
+        .contact-phone:focus,
+        .contact-phone:focus-visible {
+            color: #dc2626 !important;
+            -webkit-text-fill-color: #dc2626 !important;
+        }
+
 
         /* Footer */
         footer {
