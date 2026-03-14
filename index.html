@@ -58,6 +58,10 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        body.is-loading {
+            overflow: hidden;
+        }
+
         /* ─── BACKGROUND ─────────────────────────────────── */
         .bg-layer {
             position: fixed;
@@ -160,6 +164,90 @@
             100% {
                 transform: translateY(-100vh) translateX(var(--drift));
                 opacity: 0;
+            }
+        }
+
+        /* ─── LOADER ─────────────────────────────────────── */
+        .page-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 250;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                    radial-gradient(circle at 50% 42%, rgba(220, 38, 38, 0.12) 0%, transparent 18%),
+                    linear-gradient(180deg, rgba(8, 8, 8, 0.99) 0%, rgba(0, 0, 0, 1) 100%);
+            transition: opacity 0.7s ease, visibility 0.7s ease;
+        }
+
+        .page-loader.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-core {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: min(76vw, 360px);
+            min-height: 360px;
+        }
+
+        .loader-logo-wrap {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            display: grid;
+            place-items: center;
+        }
+
+        .loader-logo-wrap::before {
+            content: '';
+            position: absolute;
+            inset: 16%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.14) 0%, rgba(220, 38, 38, 0.08) 38%, transparent 72%);
+            filter: blur(14px);
+            animation: loaderGlow 2.2s ease-in-out infinite;
+        }
+
+        .loader-logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 26px rgba(220, 38, 38, 0.35));
+            animation: loaderFloat 2.6s ease-in-out infinite, loaderGlowPulse 2.2s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes loaderGlow {
+            0%, 100% {
+                transform: scale(0.92);
+                opacity: 0.45;
+            }
+            50% {
+                transform: scale(1.04);
+                opacity: 0.95;
+            }
+        }
+
+        @keyframes loaderFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes loaderGlowPulse {
+            0%, 100% {
+                opacity: 0.92;
+            }
+            50% {
+                opacity: 1;
             }
         }
 
@@ -1025,6 +1113,20 @@
 
         /* Small mobile: up to 480px */
         @media (max-width: 480px) {
+            .loader-logo-wrap {
+                width: 172px;
+                height: 172px;
+            }
+
+            .loader-logo {
+                width: 118px;
+                height: 118px;
+            }
+
+            .loader-core {
+                width: min(84vw, 280px);
+                min-height: 280px;
+            }
 
             /* Header */
             header {
@@ -1414,7 +1516,15 @@
         }
     </style>
 </head>
-<body>
+<body class="is-loading">
+
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-core">
+        <div class="loader-logo-wrap">
+            <img src="https://i.ibb.co/Ld3Knxsg/Karma-Logo.png" alt="Karma Logo" class="loader-logo">
+        </div>
+    </div>
+</div>
 
 <div class="bg-layer"></div>
 <div class="bg-grid"></div>
@@ -1664,6 +1774,32 @@
 </footer>
 
 <script>
+    const loaderStartedAt = Date.now();
+
+    function hidePageLoader() {
+        const loader = document.getElementById('pageLoader');
+        if (!loader || loader.classList.contains('is-hidden')) {
+            return;
+        }
+
+        const minVisibleMs = 900;
+        const wait = Math.max(0, minVisibleMs - (Date.now() - loaderStartedAt));
+
+        window.setTimeout(() => {
+            loader.classList.add('is-hidden');
+            document.body.classList.remove('is-loading');
+            window.setTimeout(() => loader.remove(), 750);
+        }, wait);
+    }
+
+    if (document.readyState === 'complete') {
+        hidePageLoader();
+    } else {
+        window.addEventListener('load', hidePageLoader, {once: true});
+    }
+
+    window.setTimeout(hidePageLoader, 3200);
+
     // ── Countdown ─────────────────────────────────────
     function updateCountdown() {
         const target = new Date('2026-03-24T00:00:00').getTime();
