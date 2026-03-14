@@ -17,6 +17,12 @@
           rel="stylesheet">
 
     <style>
+        @font-face {
+            font-family: 'Origami';
+            src: url('./Origami.ttf') format('truetype');
+            font-display: swap;
+        }
+
         :root {
             --red: #dc2626;
             --red-dark: #991b1b;
@@ -216,6 +222,13 @@
             letter-spacing: 0.25rem;
             text-transform: uppercase;
             margin-top: 3px;
+        }
+
+        .origami-word {
+            font-family: 'Origami', 'Orbitron', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            display: inline-block;
         }
 
         /* Header CTA */
@@ -1415,7 +1428,7 @@
     <div class="header-left">
         <img src="https://i.ibb.co/Ld3Knxsg/Karma-Logo.png" alt="Karma Logo" class="karma-logo">
         <div class="header-titles">
-            <div class="header-brand">KARMA<span>'26</span></div>
+            <div class="header-brand"><span class="origami-word">KARMA</span><span>'26</span></div>
             <div class="header-sub">KMCT College of Engineering</div>
         </div>
     </div>
@@ -1434,7 +1447,7 @@
 
     <img src="https://i.ibb.co/Ld3Knxsg/Karma-Logo.png" alt="Karma Logo" class="hero-logo-img">
 
-    <h1 class="hero-title">KARMA<span class="hero-title-year">'26</span></h1>
+    <h1 class="hero-title"><span class="origami-word">KARMA</span><span class="hero-title-year">'26</span></h1>
 
     <p class="hero-tagline">National Level Techno Cultural Extravaganza</p>
 
@@ -1472,7 +1485,7 @@
 <!-- ── COUNTDOWN ──────────────────────────────────── -->
 <section class="countdown-section">
     <div class="section-label">Event Begins In</div>
-    <div class="section-heading">Count Down to Karma</div>
+    <div class="section-heading">Count Down to <span class="origami-word">Karma</span></div>
 
     <div class="countdown">
         <div class="countdown-item">
@@ -1523,7 +1536,7 @@
 <!-- ── REGISTRATION BANNER ────────────────────────── -->
 <div class="register-banner">
     <div class="banner-eyebrow">Registrations Open</div>
-    <div class="banner-title">Secure Your Spot at Karma '26</div>
+    <div class="banner-title">Secure Your Spot at <span class="origami-word">Karma</span> '26</div>
     <p class="banner-desc">
         Join thousands of participants from across the nation for three days of technology, culture, and competition.
         Don't miss out — spots are limited.
@@ -1535,7 +1548,7 @@
             <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
             <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
         </svg>
-        Register for Karma '26
+        Register for <span class="origami-word">Karma</span> '26
     </a>
     <div class="register-note">Free entry · March 24–26, 2026 · KMCT College of Engineering</div>
 </div>
@@ -1544,17 +1557,19 @@
 <section class="about-section" id="about">
     <div class="section-intro">
         <div class="section-label">About the Fest</div>
-        <div class="section-heading">What is Karma '26?</div>
+        <div class="section-heading">What is <span class="origami-word">Karma</span> '26?</div>
     </div>
     <div class="about-card">
         <p class="about-text">
-            <strong>Karma</strong> — the crowning jewel of KMCT College of Engineering's annual calendar — stands as the
+            <strong><span class="origami-word">Karma</span></strong> — the crowning jewel of KMCT College of
+            Engineering's annual calendar — stands as the
             epitome of innovation, collaboration, and cultural richness. This Annual National Level <strong>Techno-Socio-Cultural
             Extravaganza</strong> is a grand celebration that goes far beyond the ordinary.
         </p>
         <p class="about-text">
-            At Karma, we create an immersive experience that seamlessly integrates <strong>technology, socio-cultural
-            vibrancy, and academic excellence</strong>. Join us in this grand celebration, where each moment is a
+            At <span class="origami-word">Karma</span>, we create an immersive experience that seamlessly integrates
+            <strong>technology, socio-cultural
+                vibrancy, and academic excellence</strong>. Join us in this grand celebration, where each moment is a
             testament to the limitless potential within the KMCT College of Engineering community.
         </p>
     </div>
@@ -1630,7 +1645,7 @@
 
 <!-- ── FOOTER ──────────────────────────────────────── -->
 <footer>
-    <div class="footer-logo">KARMA<span>'26</span></div>
+    <div class="footer-logo"><span class="origami-word">KARMA</span><span>'26</span></div>
     <div class="footer-college">KMCT College of Engineering · Kozhikode, Kerala</div>
     <div class="footer-divider"></div>
     <div class="footer-cta-wrap">
@@ -1643,7 +1658,9 @@
             Register Now
         </a>
     </div>
-    <div class="footer-bottom">© 2026 Karma · All Rights Reserved · KMCT College of Engineering</div>
+    <div class="footer-bottom">© 2026 <span class="origami-word">Karma</span> · All Rights Reserved · KMCT College of
+        Engineering
+    </div>
 </footer>
 
 <script>
