@@ -4,92 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Website Favicon -->
     <link rel="icon" type="image/png" href="https://i.ibb.co/JjXy9www/image.png">
     <link rel="apple-touch-icon" href="https://i.ibb.co/JjXy9www/image.png">
 
-
-    <!-- Primary Meta Tags -->
-    <title>Karma 26 - National Level Techno Cultural Extravaganza | KMCT College of Engineering</title>
-    <meta name="title" content="Karma '26 - National Level Techno Cultural Extravaganza | KMCT College of Engineering">
+    <title>Karma '26 - National Level Techno Cultural Extravaganza | KMCT College of Engineering</title>
     <meta name="description"
           content="Join Karma '26, the premier national-level techno-cultural fest at KMCT College of Engineering, Kozhikode. 30+ events, ₹1L+ prize pool, 3500+ participants. March 24-26, 2026.">
-    <meta name="keywords"
-          content="Karma 26, KMCT College, tech fest, cultural fest, Kozhikode, Kerala, national level fest, college fest 2026, technical events, cultural events, engineering college fest">
-    <meta name="author" content="KMCT College of Engineering">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kmctkarma.com/">
-    <meta property="og:title" content="Karma 26 - National Level Techno Cultural Extravaganza">
-    <meta property="og:description"
-          content="Join Karma '26, the premier national-level techno-cultural fest at KMCT College of Engineering, Kozhikode. 30+ events, ₹1L+ prize pool, 3500+ participants. March 24-26, 2026.">
-    <meta property="og:image" content="https://i.ibb.co/JjXy9www/image.png">
-    <meta property="og:site_name" content="Karma '26">
-    <meta property="og:locale" content="en_IN">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://kmctkarma.com/">
-    <meta property="twitter:title" content="Karma 26 - National Level Techno Cultural Extravaganza">
-    <meta property="twitter:description"
-          content="Join Karma '26, the premier national-level techno-cultural fest at KMCT College of Engineering, Kozhikode. 30+ events, ₹1L+ prize pool, 3500+ participants. March 24-26, 2026.">
-    <meta property="twitter:image" content="https://kmctkarma.com/twitter-image.jpg">
-
-    <!-- Additional Meta Tags -->
     <meta name="theme-color" content="#000000">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Karma '26">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://kmctkarma.com/">
-
-
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Event",
-            "name": "Karma '26",
-            "description": "National Level Techno Cultural Extravaganza hosted by KMCT College of Engineering, Kozhikode",
-            "startDate": "2026-03-24",
-            "endDate": "2026-03-26",
-            "eventStatus": "https://schema.org/EventScheduled",
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "location": {
-                "@type": "Place",
-                "name": "KMCT College of Engineering",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Kozhikode",
-                    "addressRegion": "Kerala",
-                    "addressCountry": "IN"
-                }
-            },
-            "organizer": {
-                "@type": "EducationalOrganization",
-                "name": "KMCT College of Engineering",
-                "url": "https://www.kmct.edu.in"
-            },
-            "offers": {
-                "@type": "AggregateOffer",
-                "lowPrice": "0",
-                "priceCurrency": "INR",
-                "availability": "https://schema.org/InStock"
-            },
-            "performer": {
-                "@type": "PerformingGroup",
-                "name": "Various Artists and Performers"
-            }
-        }
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+        :root {
+            --red: #dc2626;
+            --red-dark: #991b1b;
+            --red-bright: #ef4444;
+            --red-glow: rgba(220, 38, 38, 0.5);
+            --red-subtle: rgba(220, 38, 38, 0.08);
+            --red-mid: rgba(220, 38, 38, 0.2);
+            --black: #000000;
+            --surface: #080808;
+            --surface2: #0f0f0f;
+            --border: rgba(220, 38, 38, 0.18);
+            --border-hover: rgba(220, 38, 38, 0.6);
+            --text: #f5f5f5;
+            --text-muted: #737373;
+            --text-dim: #a3a3a3;
+        }
 
         * {
             margin: 0;
@@ -102,88 +45,103 @@
         }
 
         body {
-            font-family: 'Orbitron', sans-serif;
-            background: #000000;
-            color: #ffffff;
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--black);
+            color: var(--text);
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Animated Background */
-        .animated-bg {
+        /* ─── BACKGROUND ─────────────────────────────────── */
+        .bg-layer {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
+            z-index: -2;
+            background: var(--black);
+        }
+
+        .bg-grid {
+            position: fixed;
+            inset: 0;
             z-index: -1;
-            background: #000000;
-            overflow: hidden;
+            background-image: linear-gradient(rgba(220, 38, 38, 0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(220, 38, 38, 0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
         }
 
-        .animated-bg::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            top: -50%;
-            left: -50%;
-            background: linear-gradient(45deg, transparent 30%, rgba(220, 38, 38, 0.03) 50%, transparent 70%),
-            linear-gradient(-45deg, transparent 30%, rgba(220, 38, 38, 0.02) 50%, transparent 70%);
-            animation: backgroundMove 20s linear infinite;
-        }
-
-        .animated-bg::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: radial-gradient(ellipse at 20% 30%, rgba(220, 38, 38, 0.05) 0%, transparent 50%),
-            radial-gradient(ellipse at 80% 70%, rgba(220, 38, 38, 0.05) 0%, transparent 50%);
-            animation: pulse 15s ease-in-out infinite;
-        }
-
-        @keyframes backgroundMove {
-            0% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-            100% {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 0.3;
-            }
-            50% {
-                opacity: 0.6;
-            }
-        }
-
-        .particles {
+        .bg-glow-1 {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: -20%;
+            left: -10%;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.07) 0%, transparent 65%);
+            z-index: -1;
+            animation: driftA 25s ease-in-out infinite alternate;
+        }
+
+        .bg-glow-2 {
+            position: fixed;
+            bottom: -20%;
+            right: -10%;
+            width: 55vw;
+            height: 55vw;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.06) 0%, transparent 65%);
+            z-index: -1;
+            animation: driftB 30s ease-in-out infinite alternate;
+        }
+
+        @keyframes driftA {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(5vw, 8vh);
+            }
+        }
+
+        @keyframes driftB {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(-5vw, -6vh);
+            }
+        }
+
+        /* Scanline overlay */
+        .scanlines {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 0, 0, 0.03) 2px,
+                    rgba(0, 0, 0, 0.03) 4px
+            );
+        }
+
+        /* Particles */
+        #particles {
+            position: fixed;
+            inset: 0;
             z-index: -1;
             pointer-events: none;
         }
 
         .particle {
             position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(220, 38, 38, 0.3);
             border-radius: 50%;
-            animation: float 20s infinite;
+            animation: rise linear infinite;
+            opacity: 0;
         }
 
-        @keyframes float {
-            0%, 100% {
+        @keyframes rise {
+            0% {
                 transform: translateY(0) translateX(0);
                 opacity: 0;
             }
@@ -191,621 +149,1478 @@
                 opacity: 1;
             }
             90% {
-                opacity: 1;
+                opacity: 0.6;
             }
             100% {
-                transform: translateY(-100vh) translateX(50px);
+                transform: translateY(-100vh) translateX(var(--drift));
                 opacity: 0;
             }
         }
 
-        /* Header */
+        /* ─── HEADER ──────────────────────────────────────── */
         header {
-            position: relative;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.95);
-            border-bottom: 1px solid rgba(220, 38, 38, 0.2);
-        }
-
-        .college-name {
-            text-align: center;
-            font-size: 0.7rem;
-            letter-spacing: 0.3rem;
-            color: #a3a3a3;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-            text-transform: uppercase;
-        }
-
-        .header-content {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            padding: 0.85rem 2rem;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
         }
 
         .karma-logo {
-            width: 80px;
-            height: 80px;
-            filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.3));
-            transition: transform 0.3s ease;
+            width: 48px;
+            height: 48px;
+            filter: drop-shadow(0 0 12px var(--red-glow));
+            transition: transform 0.3s ease, filter 0.3s ease;
+            flex-shrink: 0;
         }
 
         .karma-logo:hover {
-            transform: scale(1.05);
+            transform: scale(1.08);
+            filter: drop-shadow(0 0 20px var(--red-glow));
         }
 
-        .title-container {
-            text-align: center;
+        .header-titles {
+            display: flex;
+            flex-direction: column;
         }
 
-        .logo-text {
-            font-size: 3.5rem;
+        .header-brand {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
             font-weight: 900;
-            color: #ffffff;
-            letter-spacing: 0.5rem;
+            letter-spacing: 0.35rem;
             line-height: 1;
-            margin-bottom: 0.5rem;
+            color: #fff;
         }
 
-        .year {
-            font-size: 3rem;
-            color: #dc2626;
-            font-weight: 900;
-            display: inline-block;
-            margin-left: 0.5rem;
+        .header-brand span {
+            color: var(--red);
         }
 
-        .tagline {
-            font-size: 0.75rem;
-            color: #a3a3a3;
-            letter-spacing: 0.2rem;
-            margin-top: 0.75rem;
-            font-weight: 400;
+        .header-sub {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 0.25rem;
             text-transform: uppercase;
+            margin-top: 3px;
         }
 
-        /* Countdown Section */
-        .countdown-section {
-            padding: 3rem 1rem;
+        /* Header CTA */
+        .header-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.4rem;
+            background: var(--red);
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .header-cta:hover {
+            background: var(--red-bright);
+            box-shadow: 0 0 25px var(--red-glow);
+            transform: translateY(-1px);
+        }
+
+        .header-cta svg {
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
+        }
+
+        /* ─── HERO ────────────────────────────────────────── */
+        .hero {
+            min-height: 92vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            padding: 5rem 1.5rem 4rem;
+            position: relative;
         }
 
-        .countdown-title {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #ffffff;
+        .hero-college {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.5rem;
+            color: var(--text-muted);
             text-transform: uppercase;
+            margin-bottom: 2.5rem;
+            animation: fadeDown 0.8s ease both;
+        }
+
+        /* Red accent line before college name */
+        .hero-college::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 1px;
+            background: var(--red);
+            vertical-align: middle;
+            margin-right: 1rem;
+        }
+
+        .hero-college::after {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 1px;
+            background: var(--red);
+            vertical-align: middle;
+            margin-left: 1rem;
+        }
+
+        .hero-logo-img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 0 30px rgba(220, 38, 38, 0.4));
+            animation: fadeDown 0.9s ease 0.1s both, floatLogo 6s ease-in-out 1s infinite;
+        }
+
+        @keyframes floatLogo {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(4rem, 14vw, 9rem);
+            font-weight: 900;
+            line-height: 0.9;
+            letter-spacing: 0.08em;
+            color: #fff;
+            animation: fadeDown 1s ease 0.2s both;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-title-year {
+            color: var(--red);
+            font-size: 0.65em;
+            vertical-align: super;
+            display: inline-block;
+            animation: glowPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes glowPulse {
+            0%, 100% {
+                text-shadow: 0 0 20px var(--red-glow);
+            }
+            50% {
+                text-shadow: 0 0 50px var(--red-glow), 0 0 80px rgba(220, 38, 38, 0.3);
+            }
+        }
+
+        .hero-tagline {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(0.75rem, 2vw, 1rem);
+            color: var(--text-dim);
+            letter-spacing: 0.35rem;
+            text-transform: uppercase;
+            margin-top: 1.2rem;
+            font-weight: 500;
+            animation: fadeDown 1s ease 0.35s both;
+        }
+
+        /* Decorative line under title */
+        .hero-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem auto;
+            width: min(400px, 80vw);
+            animation: fadeDown 1s ease 0.4s both;
+        }
+
+        .hero-divider-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--red), transparent);
+        }
+
+        .hero-divider-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--red);
+            transform: rotate(45deg);
+            box-shadow: 0 0 10px var(--red-glow);
+        }
+
+        /* CTA Group */
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0.5rem;
+            animation: fadeDown 1s ease 0.5s both;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 1rem 2.5rem;
+            background: var(--red);
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .btn-primary:hover::before {
+            opacity: 1;
+        }
+
+        .btn-primary:hover {
+            background: var(--red-bright);
+            box-shadow: 0 0 40px var(--red-glow), 0 8px 30px rgba(220, 38, 38, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: var(--text-dim);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid var(--border);
+            clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--red);
+            color: var(--red);
+            box-shadow: 0 0 20px var(--red-subtle);
+        }
+
+        /* Scroll indicator */
+        .scroll-hint {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.4;
+            animation: fadeDown 1s ease 1.2s both;
+        }
+
+        .scroll-hint span {
+            font-size: 0.55rem;
             letter-spacing: 0.3rem;
-            font-weight: 400;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .scroll-arrow {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--red), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% {
+                transform: scaleY(1);
+            }
+            50% {
+                transform: scaleY(0.5);
+            }
+        }
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ─── COUNTDOWN ───────────────────────────────────── */
+        .countdown-section {
+            padding: 5rem 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.5rem;
+            color: var(--red);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-heading {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            font-weight: 700;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 3rem;
         }
 
         .countdown {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 1rem;
-            max-width: 600px;
-            margin: 0 auto 3rem;
-            padding: 0 1rem;
+            display: flex;
+            justify-content: center;
+            gap: clamp(0.5rem, 2vw, 2rem);
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
         }
 
         .countdown-item {
-            background: #0a0a0a;
-            border: 1px solid rgba(220, 38, 38, 0.3);
-            border-radius: 4px;
-            padding: 1.5rem 1rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 4vw, 3rem);
+            min-width: clamp(80px, 18vw, 140px);
             transition: all 0.3s ease;
+            clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+        }
+
+        .countdown-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--red);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .countdown-item:hover::before {
+            transform: scaleX(1);
         }
 
         .countdown-item:hover {
-            border-color: #dc2626;
+            border-color: var(--border-hover);
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.15), inset 0 0 30px rgba(220, 38, 38, 0.03);
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
         }
 
         .countdown-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #dc2626;
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            color: var(--red);
             line-height: 1;
+            tabular-nums: auto;
         }
 
         .countdown-label {
-            font-size: 0.7rem;
-            color: #a3a3a3;
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 0.25rem;
             text-transform: uppercase;
-            letter-spacing: 0.15rem;
-            margin-top: 0.5rem;
-            font-weight: 400;
+            margin-top: 0.75rem;
+            font-weight: 600;
         }
 
-        /* Event Info Section */
-        .event-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            padding: 0 1rem;
-            max-width: 1000px;
+        /* Separator dots */
+        .countdown-sep {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            color: var(--red);
+            opacity: 0.3;
+            align-self: center;
+            margin-top: -1.5rem;
+            animation: blinkDot 1s step-end infinite;
+        }
+
+        @keyframes blinkDot {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        /* ─── STATS ───────────────────────────────────────── */
+        .stats-strip {
+            display: flex;
+            justify-content: center;
+            gap: clamp(1rem, 3vw, 3rem);
+            flex-wrap: wrap;
+            max-width: 900px;
             margin: 0 auto;
+            padding: 0 1rem;
         }
 
-        .info-card {
-            background: #0a0a0a;
-            border: 1px solid rgba(220, 38, 38, 0.2);
-            border-radius: 4px;
-            padding: 1.5rem 1rem;
-            text-align: center;
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-bottom: 2px solid var(--red);
+            min-width: 140px;
             transition: all 0.3s ease;
         }
 
-        .info-card:hover {
-            border-color: #dc2626;
+        .stat-item:hover {
             transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.15);
         }
 
-        .info-icon {
+        .stat-icon {
             font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-            opacity: 0.8;
+            margin-bottom: 0.5rem;
         }
 
-        .info-number {
+        .stat-num {
+            font-family: 'Orbitron', sans-serif;
             font-size: 1.8rem;
-            font-weight: 700;
-            color: #dc2626;
-            margin-bottom: 0.5rem;
+            font-weight: 800;
+            color: var(--red);
             line-height: 1;
         }
 
-        .info-label {
-            font-size: 0.7rem;
-            color: #a3a3a3;
+        .stat-label {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 0.2rem;
             text-transform: uppercase;
+            margin-top: 0.4rem;
+            font-weight: 600;
+        }
+
+        /* ─── REGISTRATION BANNER ────────────────────────── */
+        .register-banner {
+            margin: 5rem 1.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            background: linear-gradient(135deg, #1a0000 0%, #0d0000 40%, #120000 100%);
+            border: 1px solid rgba(220, 38, 38, 0.4);
+            padding: clamp(2.5rem, 6vw, 4rem) clamp(2rem, 5vw, 4rem);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .register-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--red), var(--red-bright), var(--red), transparent);
+        }
+
+        .register-banner::after {
+            content: 'REGISTER';
+            position: absolute;
+            right: -2rem;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 6rem;
+            font-weight: 900;
+            color: rgba(220, 38, 38, 0.04);
+            letter-spacing: 0.3rem;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .banner-eyebrow {
+            font-size: 0.65rem;
+            letter-spacing: 0.5rem;
+            color: var(--red);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .banner-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.3rem, 4vw, 2.2rem);
+            font-weight: 800;
+            color: #fff;
             letter-spacing: 0.15rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .banner-desc {
+            font-size: clamp(0.85rem, 2vw, 1rem);
+            color: var(--text-dim);
+            max-width: 500px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
             font-weight: 400;
         }
 
-        /* About Section */
-        .about-section {
-            max-width: 900px;
-            margin: 4rem auto;
-            padding: 2rem 1.5rem;
-            background: #0a0a0a;
-            border-radius: 4px;
-            border: 1px solid rgba(220, 38, 38, 0.2);
+        .btn-register {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1.1rem 3rem;
+            background: var(--red);
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.25rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .about-title {
-            font-size: 1.5rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: #ffffff;
+        .btn-register::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .btn-register:hover::before {
+            opacity: 1;
+        }
+
+        .btn-register:hover {
+            background: var(--red-bright);
+            box-shadow: 0 0 60px rgba(220, 38, 38, 0.6), 0 10px 40px rgba(220, 38, 38, 0.4);
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        .btn-register svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .register-note {
+            margin-top: 1.2rem;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            letter-spacing: 0.15rem;
             text-transform: uppercase;
-            letter-spacing: 0.2rem;
-            font-weight: 700;
+        }
+
+        /* ─── ABOUT ───────────────────────────────────────── */
+        .about-section {
+            max-width: 900px;
+            margin: 0 auto 5rem;
+            padding: 0 1.5rem;
+        }
+
+        .section-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-card {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            padding: clamp(2rem, 5vw, 3.5rem);
+            position: relative;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--red), transparent);
         }
 
         .about-text {
-            font-size: 0.85rem;
-            line-height: 1.8;
-            color: #d4d4d4;
-            text-align: center;
+            font-size: clamp(0.9rem, 2vw, 1.05rem);
+            line-height: 1.9;
+            color: var(--text-dim);
             font-weight: 400;
         }
 
-        /* Highlights Section */
-        .highlights-section {
-            padding: 3rem 1rem;
-            text-align: center;
+        .about-text + .about-text {
+            margin-top: 1.5rem;
         }
 
-        .section-title {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: #ffffff;
-            text-transform: uppercase;
-            letter-spacing: 0.2rem;
-            font-weight: 700;
+        .about-text strong {
+            color: var(--red);
+            font-weight: 600;
+        }
+
+        /* ─── HIGHLIGHTS ──────────────────────────────────── */
+        .highlights-section {
+            padding: 0 1.5rem 5rem;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         .highlights-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            max-width: 1000px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
         }
 
         .highlight-card {
-            background: #0a0a0a;
-            border: 1px solid rgba(220, 38, 38, 0.2);
-            border-radius: 4px;
-            padding: 1.5rem;
-            transition: all 0.3s ease;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            padding: 2rem 1.75rem;
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--red);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .highlight-card:hover::after {
+            transform: scaleX(1);
         }
 
         .highlight-card:hover {
-            border-color: #dc2626;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
+            border-color: rgba(220, 38, 38, 0.35);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(220, 38, 38, 0.12);
+        }
+
+        .highlight-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
         }
 
         .highlight-title {
-            font-size: 1rem;
-            color: #dc2626;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            color: var(--red);
             margin-bottom: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.1rem;
+            letter-spacing: 0.12rem;
             font-weight: 600;
         }
 
         .highlight-text {
-            color: #d4d4d4;
-            line-height: 1.6;
-            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.7;
+            font-size: 0.9rem;
             font-weight: 400;
         }
 
-        /* Contact Section */
+        /* ─── CONTACT ─────────────────────────────────────── */
         .contact-section {
             max-width: 1000px;
-            margin: 4rem auto;
-            padding: 2rem 1.5rem;
-            background: #0a0a0a;
-            border-radius: 4px;
-            border: 1px solid rgba(220, 38, 38, 0.2);
+            margin: 0 auto 5rem;
+            padding: 0 1.5rem;
         }
 
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
-            margin-top: 1.5rem;
+            margin-top: 3rem;
         }
 
         .contact-card {
-            background: #000000;
-            border: 1px solid rgba(220, 38, 38, 0.2);
-            border-radius: 4px;
-            padding: 1.25rem;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            padding: 1.75rem;
             text-align: center;
             transition: all 0.3s ease;
+            position: relative;
         }
 
         .contact-card:hover {
-            border-color: #dc2626;
+            border-color: rgba(220, 38, 38, 0.4);
+            box-shadow: 0 8px 30px rgba(220, 38, 38, 0.1);
+        }
+
+        .contact-avatar {
+            width: 48px;
+            height: 48px;
+            background: rgba(220, 38, 38, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--red);
         }
 
         .contact-name {
-            font-size: 1rem;
-            color: #ffffff;
-            margin-bottom: 0.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            color: #fff;
+            margin-bottom: 0.4rem;
             text-transform: uppercase;
             font-weight: 600;
             letter-spacing: 0.1rem;
         }
 
         .contact-role {
-            color: #a3a3a3;
-            margin-bottom: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
             font-size: 0.65rem;
-            font-weight: 400;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.1rem;
+            letter-spacing: 0.12rem;
         }
 
         .contact-phone {
-            color: #dc2626 !important;
-            -webkit-text-fill-color: #dc2626 !important;
+            color: var(--red) !important;
+            -webkit-text-fill-color: var(--red) !important;
             font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 600;
+            letter-spacing: 0.05rem;
         }
 
-        /* Ensure the phone color remains the same across all states and on mobile */
-        .contact-phone,
-        .contact-phone:link,
-        .contact-phone:visited,
-        .contact-phone:hover,
-        .contact-phone:active,
-        .contact-phone:focus,
-        .contact-phone:focus-visible {
-            color: #dc2626 !important;
-            -webkit-text-fill-color: #dc2626 !important;
-        }
-
-
-        /* Footer */
+        /* ─── FOOTER ──────────────────────────────────────── */
         footer {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
             text-align: center;
-            padding: 2rem 1rem;
-            background: #000000;
-            border-top: 1px solid rgba(220, 38, 38, 0.3);
-            margin-top: 4rem;
         }
 
-        .footer-text {
-            color: #a3a3a3;
-            font-size: 0.75rem;
-            font-weight: 400;
-            letter-spacing: 0.1rem;
+        .footer-logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 0.4rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-logo span {
+            color: var(--red);
         }
 
         .footer-college {
-            color: #dc2626;
-            font-weight: 600;
-            margin-top: 0.5rem;
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 0.3rem;
             text-transform: uppercase;
-            letter-spacing: 0.1rem;
-            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
         }
 
-        /* Tablet Styles */
-        @media (min-width: 768px) {
-            .college-name {
-                font-size: 0.8rem;
-                letter-spacing: 0.4rem;
+        .footer-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--red);
+            margin: 1.5rem auto;
+            opacity: 0.5;
+        }
+
+        .footer-cta-wrap {
+            margin-bottom: 2rem;
+        }
+
+        .footer-bottom {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            letter-spacing: 0.12rem;
+        }
+
+        /* ─── RESPONSIVE ──────────────────────────────────── */
+
+        /* Small mobile: up to 480px */
+        @media (max-width: 480px) {
+
+            /* Header */
+            header {
+                padding: 0.65rem 1rem;
+                gap: 0.5rem;
+            }
+
+            .header-sub {
+                display: none;
             }
 
             .karma-logo {
+                width: 36px;
+                height: 36px;
+            }
+
+            .header-brand {
+                font-size: 1.1rem;
+                letter-spacing: 0.2rem;
+            }
+
+            .header-cta {
+                padding: 0.55rem 0.9rem;
+                font-size: 0.55rem;
+                letter-spacing: 0.1rem;
+                clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+            }
+
+            .header-cta svg {
+                display: none;
+            }
+
+            /* Hero */
+            .hero {
+                min-height: auto;
+                padding: 5rem 1.2rem 3.5rem;
+            }
+
+            .hero-college {
+                font-size: 0.55rem;
+                letter-spacing: 0.2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-college::before, .hero-college::after {
+                width: 16px;
+                margin: 0 0.5rem;
+            }
+
+            .hero-logo-img {
+                width: 90px;
+                height: 90px;
+                margin-bottom: 1rem;
+            }
+
+            .hero-tagline {
+                font-size: 0.65rem;
+                letter-spacing: 0.2rem;
+                margin-top: 0.75rem;
+            }
+
+            .hero-divider {
+                margin: 1.5rem auto;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+                padding: 0.9rem 1.5rem;
+                font-size: 0.65rem;
+            }
+
+            /* Countdown */
+            .countdown-section {
+                padding: 3.5rem 1rem;
+            }
+
+            .section-label {
+                font-size: 0.6rem;
+                letter-spacing: 0.3rem;
+            }
+
+            .section-heading {
+                font-size: 1rem;
+                letter-spacing: 0.1rem;
+                margin-bottom: 2rem;
+            }
+
+            .countdown {
+                gap: 0.5rem;
+                margin-bottom: 2.5rem;
+                flex-wrap: nowrap;
+            }
+
+            .countdown-sep {
+                display: none;
+            }
+
+            .countdown-item {
+                flex: 1;
+                min-width: 0;
+                padding: 1rem 0.5rem;
+                clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+            }
+
+            .countdown-number {
+                font-size: 1.6rem;
+            }
+
+            .countdown-label {
+                font-size: 0.45rem;
+                letter-spacing: 0.1rem;
+                margin-top: 0.4rem;
+            }
+
+            /* Stats */
+            .stats-strip {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.75rem;
+                padding: 0 0.5rem;
+            }
+
+            .stat-item {
+                min-width: 0;
+                padding: 1rem;
+            }
+
+            .stat-icon {
+                font-size: 1.2rem;
+            }
+
+            .stat-num {
+                font-size: 1.4rem;
+            }
+
+            .stat-label {
+                font-size: 0.55rem;
+                letter-spacing: 0.1rem;
+            }
+
+            /* Registration Banner */
+            .register-banner {
+                margin: 3rem 1rem;
+                padding: 2.5rem 1.5rem;
+            }
+
+            .register-banner::after {
+                display: none;
+            }
+
+            .banner-title {
+                font-size: 1.1rem;
+                letter-spacing: 0.08rem;
+            }
+
+            .banner-desc {
+                font-size: 0.85rem;
+                margin-bottom: 2rem;
+            }
+
+            .btn-register {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+                padding: 1rem 1.5rem;
+                font-size: 0.65rem;
+                letter-spacing: 0.15rem;
+                clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+            }
+
+            .register-note {
+                font-size: 0.55rem;
+                letter-spacing: 0.08rem;
+            }
+
+            /* About */
+            .about-section {
+                margin-bottom: 3rem;
+                padding: 0 1rem;
+            }
+
+            .about-card {
+                padding: 1.75rem 1.25rem;
+            }
+
+            .about-text {
+                font-size: 0.9rem;
+            }
+
+            /* Highlights */
+            .highlights-section {
+                padding: 0 1rem 3rem;
+            }
+
+            .highlights-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+
+            .highlight-card {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .highlight-title {
+                font-size: 0.7rem;
+            }
+
+            .highlight-text {
+                font-size: 0.85rem;
+            }
+
+            /* Contact */
+            .contact-section {
+                padding: 0 1rem;
+                margin-bottom: 3rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.75rem;
+                margin-top: 2rem;
+            }
+
+            .contact-card {
+                padding: 1.25rem 0.75rem;
+            }
+
+            .contact-name {
+                font-size: 0.65rem;
+            }
+
+            .contact-role {
+                font-size: 0.55rem;
+            }
+
+            .contact-phone {
+                font-size: 0.75rem;
+            }
+
+            /* Footer */
+            footer {
+                padding: 2.5rem 1rem;
+            }
+
+            .footer-logo {
+                font-size: 1.2rem;
+            }
+
+            .footer-college {
+                font-size: 0.55rem;
+                letter-spacing: 0.15rem;
+            }
+
+            .footer-bottom {
+                font-size: 0.55rem;
+                letter-spacing: 0.05rem;
+            }
+
+            .footer-cta-wrap .btn-register {
+                width: 100%;
+                max-width: 260px;
+                justify-content: center;
+                font-size: 0.65rem;
+                padding: 0.9rem 1.5rem;
+            }
+
+            /* Scroll hint */
+            .scroll-hint {
+                display: none;
+            }
+        }
+
+        /* Medium mobile: 481–640px */
+        @media (min-width: 481px) and (max-width: 640px) {
+            header {
+                padding: 0.7rem 1.2rem;
+            }
+
+            .header-sub {
+                display: none;
+            }
+
+            .karma-logo {
+                width: 40px;
+                height: 40px;
+            }
+
+            .header-brand {
+                font-size: 1.2rem;
+            }
+
+            .header-cta {
+                padding: 0.6rem 1.1rem;
+                font-size: 0.6rem;
+            }
+
+            .hero {
+                padding: 5rem 1.5rem 3.5rem;
+            }
+
+            .hero-logo-img {
                 width: 100px;
                 height: 100px;
             }
 
-            .logo-text {
-                font-size: 4.5rem;
+            .hero-cta-group {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .year {
-                font-size: 4rem;
-            }
-
-            .tagline {
-                font-size: 0.85rem;
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
             }
 
             .countdown {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 1.5rem;
+                flex-wrap: nowrap;
+                gap: 0.6rem;
+            }
+
+            .countdown-sep {
+                display: none;
             }
 
             .countdown-item {
-                padding: 2rem 1.5rem;
+                flex: 1;
+                min-width: 0;
+                padding: 1.2rem 0.5rem;
             }
 
             .countdown-number {
-                font-size: 3.5rem;
-            }
-
-            .countdown-label {
-                font-size: 0.8rem;
-            }
-
-            .event-info {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 1.5rem;
-            }
-
-            .info-number {
-                font-size: 2.5rem;
-            }
-
-            .info-label {
-                font-size: 0.85rem;
-            }
-
-            .about-title, .section-title {
                 font-size: 2rem;
             }
 
-            .about-text {
-                font-size: 0.95rem;
+            .countdown-label {
+                font-size: 0.5rem;
             }
 
-            .highlight-text {
-                font-size: 0.9rem;
-            }
-        }
-
-        /* Desktop Styles */
-        @media (min-width: 1024px) {
-            .college-name {
-                font-size: 0.85rem;
-                letter-spacing: 0.5rem;
+            .stats-strip {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.75rem;
             }
 
-            .karma-logo {
-                width: 120px;
-                height: 120px;
+            .stat-item {
+                min-width: 0;
             }
 
-            .logo-text {
-                font-size: 5.5rem;
+            .register-banner {
+                margin: 3rem 1.2rem;
             }
 
-            .year {
-                font-size: 5rem;
+            .register-banner::after {
+                display: none;
             }
 
-            .tagline {
-                font-size: 0.9rem;
-                letter-spacing: 0.3rem;
-            }
-
-            .countdown-section {
-                padding: 4rem 2rem;
-            }
-
-            .countdown-title {
-                font-size: 1.5rem;
-            }
-
-            .countdown {
-                max-width: 700px;
-                gap: 2rem;
-            }
-
-            .countdown-item {
-                padding: 2.5rem 2rem;
-            }
-
-            .countdown-number {
-                font-size: 4rem;
-            }
-
-            .event-info {
-                gap: 2rem;
-            }
-
-            .info-card {
-                padding: 2rem;
-            }
-
-            .about-section, .contact-section {
-                padding: 3rem 2rem;
-            }
-
-            .highlights-section {
-                padding: 4rem 2rem;
-            }
-
-            .highlights-grid {
-                gap: 1.5rem;
-            }
-
-            .highlight-card {
-                padding: 2rem;
+            .btn-register {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
             }
 
             .contact-grid {
-                gap: 1.5rem;
+                grid-template-columns: 1fr 1fr;
             }
 
-            .contact-card {
-                padding: 1.5rem;
+            .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero-logo-img {
+                width: 150px;
+                height: 150px;
             }
         }
     </style>
 </head>
 <body>
-<div class="animated-bg"></div>
-<div class="particles" id="particles"></div>
 
+<div class="bg-layer"></div>
+<div class="bg-grid"></div>
+<div class="bg-glow-1"></div>
+<div class="bg-glow-2"></div>
+<div class="scanlines"></div>
+<div id="particles"></div>
+
+<!-- ── HEADER ─────────────────────────────────────── -->
 <header>
-    <div class="college-name">KMCT COLLEGE OF ENGINEERING</div>
-    <div class="header-content">
+    <div class="header-left">
         <img src="https://i.ibb.co/Ld3Knxsg/Karma-Logo.png" alt="Karma Logo" class="karma-logo">
-        <div class="title-container">
-            <div class="logo-text">KARMA<span class="year">'26</span></div>
-            <div class="tagline">National Level Techno Cultural Extravaganza</div>
+        <div class="header-titles">
+            <div class="header-brand">KARMA<span>'26</span></div>
+            <div class="header-sub">KMCT College of Engineering</div>
         </div>
     </div>
+
+    <a href="https://org.makemypass.com/web/kmct-karma-2026" target="_blank" rel="noopener" class="header-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+        Register Now
+    </a>
 </header>
 
+<!-- ── HERO ───────────────────────────────────────── -->
+<section class="hero">
+    <div class="hero-college">KMCT College of Engineering · Kozhikode, Kerala</div>
+
+    <img src="https://i.ibb.co/Ld3Knxsg/Karma-Logo.png" alt="Karma Logo" class="hero-logo-img">
+
+    <h1 class="hero-title">KARMA<span class="hero-title-year">'26</span></h1>
+
+    <p class="hero-tagline">National Level Techno Cultural Extravaganza</p>
+
+    <div class="hero-divider">
+        <div class="hero-divider-line"></div>
+        <div class="hero-divider-dot"></div>
+        <div class="hero-divider-line"></div>
+    </div>
+
+    <div class="hero-cta-group">
+        <a href="https://org.makemypass.com/web/kmct-karma-2026" target="_blank" rel="noopener" class="btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Register Now
+        </a>
+        <a href="#about" class="btn-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4M12 8h.01"/>
+            </svg>
+            Learn More
+        </a>
+    </div>
+
+    <div class="scroll-hint">
+        <div class="scroll-arrow"></div>
+        <span>Scroll</span>
+    </div>
+</section>
+
+<!-- ── COUNTDOWN ──────────────────────────────────── -->
 <section class="countdown-section">
-    <h2 class="countdown-title">Event Begins In</h2>
+    <div class="section-label">Event Begins In</div>
+    <div class="section-heading">Count Down to Karma</div>
+
     <div class="countdown">
         <div class="countdown-item">
             <div class="countdown-number" id="days">00</div>
             <div class="countdown-label">Days</div>
         </div>
+        <div class="countdown-sep">:</div>
         <div class="countdown-item">
             <div class="countdown-number" id="hours">00</div>
             <div class="countdown-label">Hours</div>
         </div>
+        <div class="countdown-sep">:</div>
         <div class="countdown-item">
             <div class="countdown-number" id="minutes">00</div>
             <div class="countdown-label">Minutes</div>
         </div>
+        <div class="countdown-sep">:</div>
         <div class="countdown-item">
             <div class="countdown-number" id="seconds">00</div>
             <div class="countdown-label">Seconds</div>
         </div>
     </div>
 
-    <div class="event-info">
-        <div class="info-card">
-            <div class="info-icon">🎯</div>
-            <div class="info-number">30+</div>
-            <div class="info-label">Events</div>
+    <div class="stats-strip">
+        <div class="stat-item">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-num">30+</div>
+            <div class="stat-label">Events</div>
         </div>
-        <div class="info-card">
-            <div class="info-icon">🏆</div>
-            <div class="info-number">₹1L+</div>
-            <div class="info-label">Prize Pool</div>
+        <div class="stat-item">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-num">₹1L+</div>
+            <div class="stat-label">Prize Pool</div>
         </div>
-        <div class="info-card">
-            <div class="info-icon">👥</div>
-            <div class="info-number">3500+</div>
-            <div class="info-label">Participants</div>
+        <div class="stat-item">
+            <div class="stat-icon">👥</div>
+            <div class="stat-num">3500+</div>
+            <div class="stat-label">Participants</div>
         </div>
-        <div class="info-card">
-            <div class="info-icon">📅</div>
-            <div class="info-number">24-26</div>
-            <div class="info-label">March 2026</div>
+        <div class="stat-item">
+            <div class="stat-icon">📅</div>
+            <div class="stat-num">24–26</div>
+            <div class="stat-label">March 2026</div>
         </div>
     </div>
 </section>
 
-<section class="about-section">
-    <h2 class="about-title">About Karma '26</h2>
-    <p class="about-text">
-        Karma, the crowning jewel in our annual calendar, represents more than just an event; it stands as the epitome
-        of innovation, collaboration, and cultural richness at KMCT College of Engineering. This Annual National Level
-        Techno-Socio-Cultural extravaganza is a grand celebration that goes beyond the ordinary.
+<!-- ── REGISTRATION BANNER ────────────────────────── -->
+<div class="register-banner">
+    <div class="banner-eyebrow">Registrations Open</div>
+    <div class="banner-title">Secure Your Spot at Karma '26</div>
+    <p class="banner-desc">
+        Join thousands of participants from across the nation for three days of technology, culture, and competition.
+        Don't miss out — spots are limited.
     </p>
-    <p class="about-text" style="margin-top: 1.5rem;">
-        At Karma, we create an immersive experience that seamlessly integrates technology, socio-cultural vibrancy, and
-        academic excellence. Join us in this grand celebration, where each moment is a testament to the limitless
-        potential within the KMCT College of Engineering community.
-    </p>
+    <a href="https://org.makemypass.com/web/kmct-karma-2026" target="_blank" rel="noopener" class="btn-register">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        Register for Karma '26
+    </a>
+    <div class="register-note">Free entry · March 24–26, 2026 · KMCT College of Engineering</div>
+</div>
+
+<!-- ── ABOUT ───────────────────────────────────────── -->
+<section class="about-section" id="about">
+    <div class="section-intro">
+        <div class="section-label">About the Fest</div>
+        <div class="section-heading">What is Karma '26?</div>
+    </div>
+    <div class="about-card">
+        <p class="about-text">
+            <strong>Karma</strong> — the crowning jewel of KMCT College of Engineering's annual calendar — stands as the
+            epitome of innovation, collaboration, and cultural richness. This Annual National Level <strong>Techno-Socio-Cultural
+            Extravaganza</strong> is a grand celebration that goes far beyond the ordinary.
+        </p>
+        <p class="about-text">
+            At Karma, we create an immersive experience that seamlessly integrates <strong>technology, socio-cultural
+            vibrancy, and academic excellence</strong>. Join us in this grand celebration, where each moment is a
+            testament to the limitless potential within the KMCT College of Engineering community.
+        </p>
+    </div>
 </section>
 
+<!-- ── HIGHLIGHTS ──────────────────────────────────── -->
 <section class="highlights-section">
-    <h2 class="section-title">Event Highlights</h2>
+    <div class="section-intro">
+        <div class="section-label">What's in Store</div>
+        <div class="section-heading">Event Highlights</div>
+    </div>
     <div class="highlights-grid">
         <div class="highlight-card">
-            <div class="highlight-title">🎪 Exotic DJ Shows</div>
+            <span class="highlight-icon">🎪</span>
+            <div class="highlight-title">Exotic DJ Shows</div>
             <p class="highlight-text">Experience electrifying performances from renowned DJs that will keep you dancing
-                all night</p>
+                all night long.</p>
         </div>
         <div class="highlight-card">
-            <div class="highlight-title">💻 Tech Competitions</div>
-            <p class="highlight-text">Showcase your technical prowess in cutting-edge competitions and challenges</p>
+            <span class="highlight-icon">💻</span>
+            <div class="highlight-title">Tech Competitions</div>
+            <p class="highlight-text">Showcase your technical prowess in cutting-edge competitions, hackathons, and
+                challenges.</p>
         </div>
         <div class="highlight-card">
-            <div class="highlight-title">🎨 Cultural Programs</div>
-            <p class="highlight-text">Celebrate diversity through vibrant cultural performances and artistic
-                expressions</p>
+            <span class="highlight-icon">🎨</span>
+            <div class="highlight-title">Cultural Programs</div>
+            <p class="highlight-text">Celebrate diversity through vibrant cultural performances and rich artistic
+                expressions.</p>
         </div>
         <div class="highlight-card">
-            <div class="highlight-title">🎤 Interactive Sessions</div>
-            <p class="highlight-text">Engage with industry experts and thought leaders in interactive symposiums</p>
+            <span class="highlight-icon">🎤</span>
+            <div class="highlight-title">Interactive Sessions</div>
+            <p class="highlight-text">Engage with industry experts and thought leaders in inspiring interactive
+                symposiums.</p>
         </div>
     </div>
 </section>
 
+<!-- ── CONTACT ─────────────────────────────────────── -->
 <section class="contact-section">
-    <h2 class="section-title">Contact Us</h2>
+    <div class="section-intro">
+        <div class="section-label">Get in Touch</div>
+        <div class="section-heading">Contact Us</div>
+    </div>
     <div class="contact-grid">
         <div class="contact-card">
+            <div class="contact-avatar">M</div>
             <div class="contact-name">Midhun</div>
             <div class="contact-role">Staff Co-ordinator</div>
             <div class="contact-phone">+91 7593 992 817</div>
         </div>
         <div class="contact-card">
+            <div class="contact-avatar">AF</div>
             <div class="contact-name">Anu Fazil</div>
             <div class="contact-role">Student Co-ordinator</div>
             <div class="contact-phone">+91 9946 596 289</div>
         </div>
         <div class="contact-card">
+            <div class="contact-avatar">N</div>
             <div class="contact-name">Nihal</div>
             <div class="contact-role">Student Co-ordinator</div>
             <div class="contact-phone">+91 96450 80905</div>
         </div>
         <div class="contact-card">
+            <div class="contact-avatar">R</div>
             <div class="contact-name">Rashin</div>
             <div class="contact-role">Student Co-ordinator</div>
             <div class="contact-phone">+91 85903 87011</div>
@@ -813,69 +1628,85 @@
     </div>
 </section>
 
+<!-- ── FOOTER ──────────────────────────────────────── -->
 <footer>
-    <div class="footer-text">© 2026 Karma - All Rights Reserved</div>
-    <div class="footer-college">KMCT College of Engineering</div>
+    <div class="footer-logo">KARMA<span>'26</span></div>
+    <div class="footer-college">KMCT College of Engineering · Kozhikode, Kerala</div>
+    <div class="footer-divider"></div>
+    <div class="footer-cta-wrap">
+        <a href="https://org.makemypass.com/web/kmct-karma-2026" target="_blank" rel="noopener" class="btn-register"
+           style="display:inline-flex;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+            </svg>
+            Register Now
+        </a>
+    </div>
+    <div class="footer-bottom">© 2026 Karma · All Rights Reserved · KMCT College of Engineering</div>
 </footer>
 
 <script>
-    // Countdown Timer
+    // ── Countdown ─────────────────────────────────────
     function updateCountdown() {
-        const eventDate = new Date('March 26, 2026 00:00:00').getTime();
-        const now = new Date().getTime();
-        const distance = eventDate - now;
+        const target = new Date('2026-03-24T00:00:00').getTime();
+        const now = Date.now();
+        const diff = target - now;
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById('days').textContent = days.toString().padStart(2, '0');
-        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-
-        if (distance < 0) {
-            document.querySelector('.countdown-title').textContent = 'Event is Live!';
-            document.getElementById('days').textContent = '00';
-            document.getElementById('hours').textContent = '00';
-            document.getElementById('minutes').textContent = '00';
-            document.getElementById('seconds').textContent = '00';
+        if (diff <= 0) {
+            document.querySelector('.section-heading').textContent = 'Event is Live!';
+            ['days', 'hours', 'minutes', 'seconds'].forEach(id => document.getElementById(id).textContent = '00');
+            return;
         }
+
+        document.getElementById('days').textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
+        document.getElementById('hours').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
     }
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    // Particle Animation
-    function createParticles() {
-        const particlesContainer = document.getElementById('particles');
-        const particleCount = 30;
-
-        for (let i = 0; i < particleCount; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 20 + 's';
-            particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
-
-            const colors = [
-                'rgba(220, 38, 38, 0.3)',
-                'rgba(220, 38, 38, 0.2)',
-                'rgba(185, 28, 28, 0.3)'
-            ];
-            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-
-            particlesContainer.appendChild(particle);
+    // ── Particles ─────────────────────────────────────
+    (function createParticles() {
+        const container = document.getElementById('particles');
+        for (let i = 0; i < 40; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            const size = Math.random() * 3 + 1;
+            const colors = ['rgba(220,38,38,0.35)', 'rgba(239,68,68,0.25)', 'rgba(185,28,28,0.3)'];
+            p.style.cssText = `
+                left: ${Math.random() * 100}%;
+                bottom: -${size}px;
+                width: ${size}px;
+                height: ${size}px;
+                background: ${colors[Math.floor(Math.random() * colors.length)]};
+                --drift: ${(Math.random() - 0.5) * 80}px;
+                animation-duration: ${Math.random() * 12 + 10}s;
+                animation-delay: ${Math.random() * 15}s;
+            `;
+            container.appendChild(p);
         }
-    }
+    })();
 
-    createParticles();
+    // ── Scroll-triggered fade in ───────────────────────
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.style.opacity = '1';
+                e.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {threshold: 0.12});
 
-    // Mobile menu optimization
-    if ('ontouchstart' in window) {
-        document.body.classList.add('touch-device');
-    }
+    document.querySelectorAll('.highlight-card, .stat-item, .contact-card, .about-card, .register-banner').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        obs.observe(el);
+    });
 </script>
+
 </body>
 </html>
